@@ -116,7 +116,7 @@ export const projectHighlights = [
       "Gives recruiters a resume-matched proof point instead of unrelated development projects.",
       "Creates a clear interview discussion around bugs, test coverage, and reporting quality.",
     ],
-    github: "https://github.com/alphatyagi007/my-pro",
+    github: "https://github.com/alphatyagi007/portfolio",
     liveDemo:
       "mailto:anshityagi0405@gmail.com?subject=Request%20details%20for%20Online%20Examination%20System%20Manual%20Testing%20Project",
     liveLabel: "Request Project Details",
