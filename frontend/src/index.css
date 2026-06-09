@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --bg: #f4f8ff;
+  --surface: rgba(255, 255, 255, 0.68);
+  --surface-strong: rgba(255, 255, 255, 0.82);
+  --text: #465268;
+  --heading: #091428;
+  --muted: #66768f;
+  --border: rgba(120, 138, 170, 0.22);
+  --brand: #0ea5e9;
+  --brand-strong: #2563eb;
+  --shadow-soft: 0 24px 80px rgba(15, 23, 42, 0.12);
+}
+
+[data-theme="dark"] {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --bg: #07111f;
+  --surface: rgba(11, 24, 40, 0.62);
+  --surface-strong: rgba(8, 18, 32, 0.82);
+  --text: #b4c1d6;
+  --heading: #f5f8ff;
+  --muted: #8ca0bc;
+  --border: rgba(163, 184, 204, 0.14);
+  --brand: #38bdf8;
+  --brand-strong: #22c55e;
+  --shadow-soft: 0 30px 100px rgba(2, 6, 23, 0.48);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@layer components {
+  .glass-panel {
+    @apply rounded-[2rem] border border-[var(--border)] bg-[var(--surface)] backdrop-blur-2xl shadow-[var(--shadow-soft)];
+  }
+
+  .section-shell {
+    @apply rounded-[2.1rem];
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand)];
+    background: var(--heading);
+  }
+
+  .btn-primary:hover {
+    background: var(--brand-strong);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-[var(--border)] bg-white/10 px-5 py-3 text-sm font-semibold text-[var(--heading)] transition duration-300 hover:-translate-y-0.5 hover:border-[var(--brand)] hover:text-[var(--brand)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand)];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-transparent bg-transparent px-5 py-3 text-sm font-semibold text-[var(--heading)] transition duration-300 hover:-translate-y-0.5 hover:border-[var(--border)] hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand)];
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-white/10 px-4 py-2 text-sm text-[var(--heading)] transition duration-300 hover:border-[var(--brand)] hover:text-[var(--brand)];
+  }
+
+  .stat-card {
+    @apply rounded-[1.5rem] border border-[var(--border)] bg-white/10 px-5 py-4 backdrop-blur-xl;
+  }
+
+  .nav-link {
+    @apply relative text-sm font-medium text-[var(--muted)] transition duration-300 hover:text-[var(--heading)];
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute -bottom-1 left-0 h-px w-0 bg-[var(--brand)] transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .project-visual {
+    @apply min-h-64 border-b border-white/10 px-6 py-7;
+  }
+
+  .timeline-card {
+    @apply glass-panel p-6;
+  }
+
+  .theme-button {
+    @apply inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-white/10 px-4 py-3 text-[var(--heading)] transition duration-300 hover:border-[var(--brand)] hover:text-[var(--brand)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand)];
+  }
+
+  .input-shell {
+    @apply flex flex-col gap-2 text-sm font-medium text-[var(--heading)];
+  }
+
+  .input-shell input,
+  .input-shell textarea {
+    @apply w-full rounded-[1.4rem] border border-[var(--border)] bg-white/5 px-4 py-3 text-[var(--heading)] outline-none transition duration-300 placeholder:text-[var(--muted)] focus:border-[var(--brand)] focus:ring-2 focus:ring-[color:rgba(56,189,248,0.18)];
+  }
+
+  .contact-row {
+    @apply flex items-center gap-3 rounded-[1.4rem] border border-[var(--border)] bg-white/10 px-4 py-4 text-sm text-[var(--heading)] transition duration-300 hover:border-[var(--brand)] hover:text-[var(--brand)];
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
