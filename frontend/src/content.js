@@ -19,7 +19,7 @@ export const profile = {
   location: "A-101 Shyam Park Ext., Sahibabad, Ghaziabad, U.P. 201005",
   linkedin: "",
   linkedinHandle: "",
-  github: "https://github.com/alphatyagi007",
+  github: "https://github.com/adishityagi0304-gif",
   whatsapp: "",
 };
 
@@ -116,7 +116,7 @@ export const projectHighlights = [
       "Gives recruiters a resume-matched proof point instead of unrelated development projects.",
       "Creates a clear interview discussion around bugs, test coverage, and reporting quality.",
     ],
-    github: "https://github.com/alphatyagi007/portfolio",
+    github: "https://github.com/adishityagi0304-gif/portfolio",
     liveDemo:
       "mailto:anshityagi0405@gmail.com?subject=Request%20details%20for%20Online%20Examination%20System%20Manual%20Testing%20Project",
     liveLabel: "Request Project Details",
