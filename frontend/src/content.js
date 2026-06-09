@@ -15,7 +15,7 @@ export const profile = {
   summary:
     "I am seeking internships and entry-level opportunities where I can contribute to manual testing, software quality assurance, defect tracking, API testing, and basic SQL-driven validation. My goal is to join a team where I can improve product quality through careful testing, clear reporting, and consistent execution.",
   email: "anshityagi0405@gmail.com",
-  phone: "+91-6397557374",
+  phone: "+91-9027080590",
   location: "A-101 Shyam Park Ext., Sahibabad, Ghaziabad, U.P. 201005",
   linkedin: "",
   linkedinHandle: "",

@@ -16,6 +16,8 @@
   --brand: #0ea5e9;
   --brand-strong: #2563eb;
   --shadow-soft: 0 24px 80px rgba(15, 23, 42, 0.12);
+  --btn-primary-bg: #091428;
+  --btn-primary-text: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -31,6 +33,8 @@
   --brand: #38bdf8;
   --brand-strong: #22c55e;
   --shadow-soft: 0 30px 100px rgba(2, 6, 23, 0.48);
+  --btn-primary-bg: #f5f8ff;
+  --btn-primary-text: #07111f;
 }
 
 html {
@@ -73,12 +77,14 @@ textarea {
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand)];
-    background: var(--heading);
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand)];
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
   }
 
   .btn-primary:hover {
     background: var(--brand-strong);
+    color: #ffffff;
   }
 
   .btn-secondary {
